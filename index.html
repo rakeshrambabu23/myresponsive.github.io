@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+
+    .navbar {
+      background-color: #2384e6; /* Replace with your desired color */
+  }
+  .navbar-nav {
+      margin-left: auto;
+  }
+  
+  .navbar-nav .nav-item:first-child,
+  .navbar-nav .nav-item:nth-child(2) {
+      margin-left: 0;
+      margin-right: 10px; /* Adjust as needed for spacing */
+  }
+  
+  /* Optional: Customize the active link color */
+  .navbar-nav .nav-link.active {
+      color: #007bff; /* Replace with your desired color */
+  }
+  
+  /* Optional: Customize the color of other links */
+  .navbar-nav .nav-link {
+      color: #000; /* Replace with your desired color */
+  }
+  
+  /* Optional: Customize the disabled link color */
+  .navbar-nav .nav-link.disabled {
+      color: #6c757d; /* Replace with your desired color */
+  }
+  *{
+  margin: 0;
+  padding: 0;
+  boox-sizing: border-box;
+  }
+  /*.hero_section{
+  background-image:url(mm.jpg);
+  min-height:80vh;
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+  .text_container{
+  color: black;
+  max-width:900px;
+  margin:0 auto;
+  text-align: center;
+  padding-top: 80px;
+  }*/
+  .hero_section {
+    background-image: url(mm.jpg);
+    min-height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .text_container {
+    color: black;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 80px;
+  }
+  
+  .search_container {
+    margin-top: 20px;
+  }
+  
+  .search_box {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    border: 1px solid #00aeff;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 688px;
+    box-sizing: border-box;
+  }
+  
+  .search_box::placeholder {
+    color: #8e8f8a;
+  }
+  
+  .Ig_text{
+  font-size:70px;
+  font-weight:400;
+  text-align: center;
+  }
+  @media (max-width: 768px) {
+    .search_box {
+      width: 90%;
+    }
+  
+    .Ig_text {
+      font-size: 1.5rem;
+    }
+  }
+  .black_box {
+    background: linear-gradient(rgb(81, 96, 228), rgb(0, 140, 255));
+    padding: 20px;
+    text-align: center;
+    color: white; /* Change text color to white for better contrast */
+  }
+  
+  .black_box h2 {
+    font-size: 3rem; /* Adjust font size for better readability */
+    font-weight: 400; /* Slightly increase font weight for better legibility */
+  }
+  
+  .black_box h2 span {
+    font-size: 1.5em; /* Adjust span font size */
+    font-weight: 300; /* Keep span font weight consistent */
+  }
+  
+  @media (max-width: 768px) {
+    .black_box {
+      height: 20vh; /* Further reduce height on smaller screens */
+      padding: 10px;
+    }
+  
+    .black_box h2 {
+      font-size: 2rem; /* Further reduce font size for smaller screens */
+    }
+  
+    .black_box h2 span {
+      font-size: 1em; /* Adjust span font size for smaller screens */
+    }
+  }
+
+@media (max-width: 480px) {
+  .black_box h2 {
+    font-size: 1.5rem; /* Further adjust font size for very small screens */
+  }
+}
+.work {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width: 1100px;
+  margin: 50px auto;
+}
+
+.grid_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card_content {
+  padding: 20px;
+  margin-left: 10px;
+}
+
+.card_content h3 {
+  margin-bottom: 10px;
+}
+
+.image_container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #f0ad4e;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ec971f;
+}
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.contact, .about, .abouti {
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  min-height: 300px;
+  color: white;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact {
+  background: linear-gradient(to left, rgb(79, 182, 241), rgb(231, 105, 200));
+}
+
+.about {
+  background: linear-gradient(to right, rgb(51, 204, 171), rgb(33, 156, 109));
+}
+
+.abouti {
+  background: linear-gradient(to left, rgb(55, 146, 189), rgb(186, 194, 72));
+}
+
+.contact img, .about img, .abouti img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.contact img {
+  margin-left: 20px;
+}
+
+.about img {
+  margin-right: 20px;
+}
+
+.abouti img {
+  margin-left: 20px;
+}
+
+.contact p, .about p, .abouti p {
+  font-weight: bold;
+  color: black;
+}
+
+.contact:hover, .about:hover, .abouti:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact img:hover, .about img:hover, .abouti img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact, .about, .abouti {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact img, .about img, .abouti img {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+  background-color: #e0f7fa;
+}
+
+.review {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 1200px; /* Adjusted max-width for larger screens */
+}
+
+.review:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.review img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+  transition: transform 0.3s;
+}
+
+.review img:hover {
+  transform: scale(1.1);
+}
+
+.review-content {
+  flex: 1;
+}
+
+.review-content h3 {
+  margin: 0 0 10px;
+}
+
+.review-content p {
+  margin: 0 0 15px;
+  color: #555;
+}
+
+.rating {
+  color: #FFD700;
+  font-size: 20px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .review {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .review img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+footer{
+   background-color: #000000ff;
+   position: relative;
+   width: 100%;
+   min-height: 350px;
+   padding: 3rem 1rem;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col{
+  min-width: 250px;
+  color:#f2f2f2f2;
+  font-family: poppins;
+  padding:0 2rem;
+}
+.col .logo{
+  width: 100px;
+  margin-bottom:25px;
+}
+.col h3{
+  color:rgb(115, 11, 235);
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.col h3::after{
+  content: '';
+  height:3px;
+  width:0px;
+  background-color: rgb(99, 12, 240);
+  position: absolute;
+  bottom: 0;
+  left:0;
+  transition: 0.3s ease;
+
+}
+.col h3:hover::after{
+  width:30px
+}
+.col .social a i{
+  color:rgb(90, 1, 255);
+  margin-top:2rem;
+  margin-right: 5px;
+  transition: 0.3s ease;
+}
+.col .social a i:hover{
+  transform: scale(1.5);
+  filter:grayscale(25);
+}
+.col .links a{
+  display: block;
+  text-decoration: none;
+  color:#f2f2f2;
+  margin-bottom: 5px;
+  position: relative;
+  transition: 0.3s ease;
+}
+.col .links a::before{
+  content:'';
+  height: 16px;
+  width:3px;
+  position: absolute;
+  top:5px;
+  left:-10px;
+  background-color: rgb(23, 8, 228);
+  transition: 0.5s ease;
+  opacity: 0;
+}
+.col .links a:hover::before{
+  opacity: 1;
+}
+.col .links a:hover{
+  transform: translateX(-8px);
+  color:rgb(69, 1, 255);
+}
+.col .contact-details{
+  display: inline-flex;
+  justify-content: space-between;
+}
+.col .contact-details i{
+  margin-right:15px;
+}
+.row .form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:2rem 0;
+}
+.row .form input{
+  background-color: #1a1c20ff;
+  border:0;
+  outline:none;
+  padding:14px 20px;
+  border-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form button{
+  padding:14px 20px;
+  border:0;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #ff014fff;
+}
+.video-section {
+  background-image:url(hh.jpg) ;
+  min-height: 600px;
+  display: grid;
+  place-items: center;
+  color: white;
+  text-align: center;
+}
+.video-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: -50px;
+}
+/********** Responsive Design ********/
+
+
+
+  </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Ltours</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+	<section class="hero_section">
+	<div class="text_container">
+	<h2><span class="Ig_text">Lakshadweep Tourism</span> </h2>
+	<h3 class="Ig_text">Where soul meets peace</h3>
+  <div class="search_container">
+    <input type="text" class="search_box" placeholder="Search...">
+  </div>
+	</div>
+	</section>
+	<section class="black_box">
+    <h2><span>Incredible</span> India</h2>
+  </section>  
+	<section class="work">
+    <div class="grid_item">
+      <div class="card">
+        <div class="image_container">
+          <img src="vv.jpg" alt="Luxury Room" style="width: 300px;">
+        </div>
+        <div class="card_content">
+          <h3>Luxury Room</h3>
+          <p><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</i></p>
+          <button class="btn btn-warning">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="grid_item">
+      <div class="card">
+        <div class="image_container">
+          <img src="vv.jpg" alt="Luxury Room" style="width: 300px;">
+        </div>
+        <div class="card_content">
+          <h3>Luxury Room</h3>
+          <p><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</i></p>
+          <button class="btn btn-warning">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="grid_item">
+      <div class="card">
+        <div class="image_container">
+          <img src="vv.jpg" alt="Luxury Room" style="width: 300px;">
+        </div>
+        <div class="card_content">
+          <h3>Luxury Room</h3>
+          <p><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</i></p>
+          <button class="btn btn-warning">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="bottom-section">
+    <div class="contact">
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page.
+      </p>
+      <img src="oo.jpg" alt="Description of image oo.jpg">
+    </div>
+    <div class="about">
+      <img src="ee.jpg" alt="Description of image ee.jpg">
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page.
+      </p>
+    </div>
+    <div class="abouti">
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page.
+      </p>
+      <img src="oo.jpg" alt="Description of image oo.jpg">
+    </div>
+  </section>
+  <section class="video-section" id="video">
+    <div class="container">
+      <h3>A world of Adventure. Awaiting for you.</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+        veniam nobis, nisi ut expedita, doloribus reprehenderit explicabo
+        non velit repellat alias saepe inventore repellendus? Molestias
+        suscipit eos tempora? Quae quaerat cumque in veritatis impedit
+        dolorum sapiente recusandae minima quo aperiam quam, excepturi quasi
+        totam ad quas? Ipsam laudantium soluta delectus!
+      </p>
+    </div>
+  </section>
+  <section class="reviews-container">
+    <div class="review">
+      <img src="nn.jpg" alt="Customer 1">
+      <div class="review-content">
+        <h3>John Doe</h3>
+        <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."</p>
+        <div class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9734;
+        </div>
+      </div>
+    </div>
+    <div class="review">
+      <img src="zz.jpg" alt="Customer 2">
+      <div class="review-content">
+        <h3>Jane Smith</h3>
+        <p>"It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."</p>
+        <div class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+        </div>
+      </div>
+    </div>
+    <div class="review">
+      <img src="xx.jpg" alt="Customer 3">
+      <div class="review-content">
+        <h3>Sam Wilson</h3>
+        <p>"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC."</p>
+        <div class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9734;
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+        <div class="row">
+              <div class="col" id="company">
+                  <img src="images/logo.png" alt="" class="logo">
+                  <p>
+                    We are specialized in tourism, make your holidays speacial.
+                    Try our premium services.
+                  </p>
+                  <div class="social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                  </div>
+              </div>
+
+
+              <div class="col" id="services">
+                 <h3>Services</h3>
+                 <div class="links">
+                    <a href="#">Transportation</a>
+                    <a href="#">Agents</a>
+                    <a href="#">Tour operators</a>
+                    <a href="#">Hotels</a>
+                 </div>
+              </div>
+
+              <div class="col" id="useful-links">
+                 <h3>Links</h3>
+                 <div class="links">
+                    <a href="#">About</a>
+                    <a href="#">Features</a>
+                    <a href="#">Our Policy</a>
+                    <a href="#">Help</a>
+                 </div>
+              </div>
+
+              <div class="col" id="contact">
+                  <h3>Contact</h3>
+                  <div class="contact-details">
+                     <i class="fa fa-location"></i>
+                     <p>FF-42, Procube Avenue, <br> Lakshadweep</p>
+                  </div>
+                  <div class="contact-details">
+                     <i class="fa fa-phone"></i>
+                     <p>+1-8755856858</p>
+                  </div>
+              </div>
+        </div>
+
+        <div class="row">
+              <div class="form">
+                <form action="">
+                    <input type="text" placeholder="Email here...">
+                    <button><i class="fa fa-paper-plane"></i></button>
+                </form>
+              </div>
+        </div>
+
+    </div>
+ </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
